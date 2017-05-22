@@ -1,12 +1,26 @@
+Bookfinder uses libcurl to query Addall.com book database to find prices.
+
+
+NOTES:
+
+Libcurl has to be referenced in the linker as follows:
+
+- Project-> properties-> C++ -> General -> Additional Include Directories. Add the directory that curl subdirectory is in.
+DO NOT reference the curl directory, but rather its parent
+
+- Project-> Properties->Linker -> General -> Additional Lib Directories. Add the cur lib dir
+
+- Project->Properties-> Linker-> Input. Add libcurl.a and libcurldll.a
+
+- Put a copy of libcurl.dll (the dynamic lib) in your executable directory
+
+PHEW! It works.
+jnc May 21, 2017
+
+
 ========================================================================
     CONSOLE APPLICATION : ConsoleApplication4 Project Overview
 ========================================================================
-
-AppWizard has created this ConsoleApplication4 application for you.
-
-This file contains a summary of what you will find in each of the files that
-make up your ConsoleApplication4 application.
-
 
 ConsoleApplication4.vcxproj
     This is the main project file for VC++ projects generated using an Application Wizard.
@@ -30,11 +44,3 @@ Other standard files:
 StdAfx.h, StdAfx.cpp
     These files are used to build a precompiled header (PCH) file
     named ConsoleApplication4.pch and a precompiled types file named StdAfx.obj.
-
-/////////////////////////////////////////////////////////////////////////////
-Other notes:
-
-AppWizard uses "TODO:" comments to indicate parts of the source code you
-should add to or customize.
-
-/////////////////////////////////////////////////////////////////////////////
