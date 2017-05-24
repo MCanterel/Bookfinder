@@ -152,7 +152,6 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\booksource\booksource\Menu.cpp" />
     <ClCompile Include="ConsoleApplication4.cpp" />
     <ClCompile Include="query.cpp" />
     <ClCompile Include="stdafx.cpp">
