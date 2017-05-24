@@ -16,7 +16,7 @@ void Menu::display() {
 	cout << "1- Enter book info." << endl;
 	cout << "2- Review book info." << endl;
 	cout << "3- Send query." << endl;
-	cout << "4- Quit." << endl;
+	cout << "4- Quit!" << endl;
 	cout << endl;
 }
 
