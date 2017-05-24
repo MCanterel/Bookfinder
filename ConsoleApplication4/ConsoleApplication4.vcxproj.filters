@@ -30,6 +30,9 @@
     <ClInclude Include="query.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="stringfind.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -42,6 +45,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\booksource\booksource\Menu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\stringfind\stringfind\stringfind.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
