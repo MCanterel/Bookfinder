@@ -10,10 +10,12 @@ DO NOT reference the curl directory, but rather its parent
 
 - Project-> Properties->Linker -> General -> Additional Lib Directories. Add the cur lib dir
 
-- Project->Properties-> Linker-> Input. Add libcurl.a and libcurldll.a
+- Project->Properties-> Linker-> Input->Additional dependencies. Add libcurl.a and libcurldll.a
 
 - Put a copy of libcurl.dll (the dynamic lib) in your executable directory
 
+-- MAKE SURE THE TARGET PLATFORM IS WIN32!
+
 
 jnc May 21, 2017
-
+changed May 24, 2017
