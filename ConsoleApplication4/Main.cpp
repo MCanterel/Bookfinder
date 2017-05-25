@@ -4,12 +4,8 @@
 
 vector<string> bookNums;
 
-int main() {
-	callRoutine();
-	//system("PAUSE");
-}
 
-int oldmain()
+int main()
 {
 	int input;
 	Menu m;
@@ -18,12 +14,12 @@ int oldmain()
 		m.display();
 
 		input = m.getChoice();
-		if (input == 1) {
+		if (input == 1) {  // INPUT ISBN INFO
 			string bookInput = m.getBookISBN();
 			bookNums.push_back(bookInput);
 			cout << "You inputted: " << bookInput << endl;
 		}
-		if (input == 2) {
+		if (input == 2) {  // REVIEW ISBN INFO
 			if (bookNums.size() > 0) {
 
 				for (unsigned int i = 0; i < bookNums.size(); i++) {
@@ -32,8 +28,7 @@ int oldmain()
 			}
 		}
 
-		if (input == 3) {
-			//send query and clear bookNums
+		if (input == 3) { 	//SEND QUERY AND CLEAR BOOKNUMS
 			if (sendQuery(bookNums) == 1) {
 				bookNums.clear();
 			}
@@ -42,7 +37,11 @@ int oldmain()
 			}
 		}
 
-	} while (input < MENUCOUNT);
+		if (input == 4) { 	//REVIEW DOWNLOADED BOOK DATA
+			stepThroughResultsDir();
+		}
+
+	} while (input <= MENUCOUNT);
 
 	cout << "Goodbye!" << endl;
 	return 0;

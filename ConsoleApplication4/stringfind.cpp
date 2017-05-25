@@ -93,13 +93,15 @@ int stepThroughResultsDir()
 				nPtr[i] = char(data.cFileName[i]);
 
 			nPtr[lstrlen(data.cFileName)] = '\0';
-			cout << nPtr << endl;
+			//cout << nPtr << endl;
 
-			string fullPathtoResult;
-			fullPathtoResult = ".\\results\\" + string(nPtr);
-			cout << "This is the full path to the file: " << fullPathtoResult << endl;
-			getBookData(fullPathtoResult);
-
+			string fName = string(nPtr);
+			if (fName != "." && fName != "..") {
+				string fullPathtoResult;
+				fullPathtoResult = ".\\results\\" + fName;
+				//cout << "This is the full path to the file: " << fullPathtoResult << endl;
+				getBookData(fullPathtoResult);
+			}
 		} while (FindNextFile(h, &data));
 	}
 	else
@@ -110,7 +112,3 @@ int stepThroughResultsDir()
 	return 0;
 }
 
-int callRoutine() {
-	stepThroughResultsDir();
-	return 0;
-}
