@@ -93,12 +93,14 @@ int stepThroughResultsDir()
 				nPtr[i] = char(data.cFileName[i]);
 
 			nPtr[lstrlen(data.cFileName)] = '\0';
-			cout << nPtr << endl;
-
-			string fullPathtoResult;
-			fullPathtoResult = ".\\results\\" + string(nPtr);
-			cout << "This is the full path to the file: " << fullPathtoResult << endl;
-			getBookData(fullPathtoResult);
+			string coreFileName = string(nPtr);
+			if (coreFileName != "." && coreFileName != "..") {
+				string fullPathtoResult = ".\\results\\" + coreFileName;
+				//fullPathtoResult = ".\\results\\" + string(nPtr);
+				//cout << "This is the full path to the file: " << fullPathtoResult << endl;
+				getBookData(fullPathtoResult);
+			}
+			
 
 		} while (FindNextFile(h, &data));
 	}
