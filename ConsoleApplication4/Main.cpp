@@ -16,6 +16,7 @@ int oldmain()
 
 	do {
 		m.display();
+
 		input = m.getChoice();
 		if (input == 1) {
 			string bookInput = m.getBookISBN();
