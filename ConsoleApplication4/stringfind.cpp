@@ -1,13 +1,9 @@
-//============================================================================
-// Name        : stringfind.cpp
-// Author      : jnc
-// Version     :
-// Copyright   : Your copyright notice
-// Description : testing string parsing of html file
-// to be integrated with booksearch
-//============================================================================
+// folder_manipulation.cpp : Defines the entry point for the console application.
+//
 
 #include "stdafx.h"
+#include <iostream>
+#include <Windows.h>
 using namespace std;
 
 void getBookData(string _bookHTMLFile) {
@@ -82,32 +78,39 @@ void getBookData(string _bookHTMLFile) {
 	system("PAUSE");
 }
 
-
-int stepThroughResultsDir(LPCSTR _resultsDir)
+int stepThroughResultsDir()
 {
 	WIN32_FIND_DATA data;
-	//HANDLE hFind = FindFirstFile(".\\results\\*.*", &data);      // DIRECTORY
-	HANDLE hFind = FindFirstFile(_resultsDir, &data);      // DIRECTORY
+	//HANDLE h = FindFirstFile(L"c:\\*.*", &data);
+	HANDLE h = FindFirstFile(L".\\results\\*.*", &data);
 
-	if (hFind != INVALID_HANDLE_VALUE) {
-		//int counter = 1;
-		do {
-			std::basic_string<TCHAR> myString(data.cFileName);
-			if ((myString != ".") && (myString != "..")) {
-				string fullPathtoResult = ".\\results\\" + myString;
-				//cout << "Here: " <<fullPathtoResult << endl;
-				getBookData(fullPathtoResult);
-			}
-		} while (FindNextFile(hFind, &data));
-		FindClose(hFind);
+	if (h != INVALID_HANDLE_VALUE)
+	{
+		do
+		{
+			char*   nPtr = new char[lstrlen(data.cFileName) + 1];
+			for (int i = 0; i < lstrlen(data.cFileName); i++)
+				nPtr[i] = char(data.cFileName[i]);
+
+			nPtr[lstrlen(data.cFileName)] = '\0';
+			cout << nPtr << endl;
+
+			string fullPathtoResult;
+			fullPathtoResult = ".\\results\\" + string(nPtr);
+			cout << "This is the full path to the file: " << fullPathtoResult << endl;
+			getBookData(fullPathtoResult);
+
+		} while (FindNextFile(h, &data));
 	}
+	else
+		cout << "Error: No such folder." << endl;
+
+	FindClose(h);
+
 	return 0;
 }
 
-//int oldmain() {
-//	//stepThroughResultsDir(".\\results\\*.*");
-//	//stepThroughResultsDir(resultsDir);
-//	return 0;
-//}
-
-
+int callRoutine() {
+	stepThroughResultsDir();
+	return 0;
+}

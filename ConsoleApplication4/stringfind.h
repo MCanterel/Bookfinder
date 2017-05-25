@@ -2,7 +2,8 @@
 
 #pragma once
 
+int callRoutine();
 void getBookData(string);
-int stepThroughResultsDir(LPCSTR);
+int stepThroughResultsDir();
 
-const string resultsDir = ".\\results\\*.*";
+//const string resultsDir = ".\\results\\*.*";

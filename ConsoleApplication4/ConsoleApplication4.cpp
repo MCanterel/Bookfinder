@@ -4,7 +4,12 @@
 
 vector<string> bookNums;
 
-int main()
+int main() {
+	callRoutine();
+	system("PAUSE");
+}
+
+int oldmain()
 {
 	int input;
 	Menu m;

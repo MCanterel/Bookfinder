@@ -22,4 +22,6 @@
 #include <Windows.h>
 #include <regex>
 
+#include "stringfind.h"
+
 
