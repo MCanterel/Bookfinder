@@ -1,3 +1,6 @@
+This is the final production version.
+Reviewed July 31, 2017
+
 Bookfinder uses libcurl to query Addall.com book database to find prices.
 
 
