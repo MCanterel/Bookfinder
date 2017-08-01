@@ -310,6 +310,7 @@
     <ClCompile Include="stringfind.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\xxcurl- Release\libcurl.dll" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
