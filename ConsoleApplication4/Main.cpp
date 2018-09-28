@@ -22,7 +22,7 @@ int main()
 		if (input == 2) {  // REVIEW ISBN INFO
 			if (bookNums.size() > 0) {
 
-				for (unsigned int i = 0; i < bookNums.size(); i++) {
+				for ( unsigned int i = 0; i < bookNums.size(); i++) {
 					cout << "Item # " << i + 1 << ": " << bookNums[i] << endl;
 				}
 			}
