@@ -10,7 +10,7 @@ void getBookData(string _bookHTMLFile) {
 
 	string line;
 
-	bool trigger = false;
+	//bool trigger = false;
 	const string searchPhrase1 = "<TD VALIGN=BOTTOM ALIGN=LEFT><B>TITLE: </B> <font FACE=ARIAL COLOR=#006699>";
 	//capture this and the next 2 lines
 

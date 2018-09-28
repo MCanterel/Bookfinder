@@ -54,8 +54,6 @@ int webQuery(string str) {
 		string fileName = formFileName(str);
 		const char * fName = fileName.c_str();
 
-		FILE* file = fopen(fName, "w");
-
 		if (fName != NULL) {
 			FILE* file = fopen(fName, "w");
 
@@ -81,6 +79,7 @@ int webQuery(string str) {
 
 				printf("Success!\n");
 			}
+
 			return 1 ;
 		}
 		else {
