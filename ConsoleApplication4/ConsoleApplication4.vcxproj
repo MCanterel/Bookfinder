@@ -122,7 +122,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>U:\VS\Projects-old\~jnc_code\booksource_3- FINAL VERSION\ConsoleApplication4\curl.7.30.0.2\build\native\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>U:\VS\bookfinder\ConsoleApplication4\curl.7.30.0.2\build\native\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -138,7 +138,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>U:\VS\Projects-old\~jnc_code\booksource_3- FINAL VERSION\ConsoleApplication4\curl.7.30.0.2\build\native\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>U:\VS\bookfinder\ConsoleApplication4\curl.7.30.0.2\build\native\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -190,7 +190,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>U:\VS\Projects-old\~jnc_code\booksource_3- FINAL VERSION\ConsoleApplication4\curl.7.30.0.2\build\native\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>U:\VS\bookfinder\ConsoleApplication4\curl.7.30.0.2\build\native\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -225,7 +225,7 @@
     <ClInclude Include="Menu.h" />
     <ClInclude Include="query.h" />
     <ClInclude Include="stdafx.h" />
-    <ClInclude Include="stringfind.h" />
+    <ClInclude Include="process.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
@@ -240,7 +240,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='curl- Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='curl- Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="stringfind.cpp" />
+    <ClCompile Include="process.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="D:\OneDrive - CLS\jnc code\lib\libcurl.dll" />

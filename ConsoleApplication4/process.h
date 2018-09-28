@@ -1,8 +1,8 @@
-//stringfind.h
+//process.h
 
 #pragma once
 
-int callRoutine();
+std::string getBookISBN();
 void getBookData(string);
 int stepThroughResultsDir();
 

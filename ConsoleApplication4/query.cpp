@@ -22,7 +22,7 @@ unsigned int write_data(const void *ptr, unsigned int size, unsigned int nmeb,
 string formQuery(string _str) {
 
 	string in_prepend = "query=";
-	string in_append = "&type=ISBN"; //&submit=Submit
+	string in_append = "&type=ISBN";
 	string fullString = in_prepend + _str + in_append;
 	return fullString;
 }
@@ -48,6 +48,7 @@ int webQuery(string str) {
 	int res = (curl_global_init(CURL_GLOBAL_ALL));
 	if (res != 0) {
 		printf("LibCurl sucks!\n");
+		return -1;
 	}
 	else {
 
@@ -72,7 +73,7 @@ int webQuery(string str) {
 				curl_easy_setopt(myHandle, CURLOPT_VERBOSE, 1L);
 
 				CURLcode result;
-				result = curl_easy_perform(myHandle); // We’ll store the result of CURL’s webpage retrieval, for simple error checking.
+				result = curl_easy_perform(myHandle); // store the result of CURL’s webpage retrieval, for simple error checking.
 				fclose(file);
 
 				curl_easy_cleanup(myHandle);

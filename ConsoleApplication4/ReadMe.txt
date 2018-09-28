@@ -11,7 +11,7 @@ Libcurl has to be referenced in the linker as follows:
 - Project-> properties-> C++ -> General -> Additional Include Directories. Add the directory that curl subdirectory is in.
 DO NOT reference the curl directory, but rather its parent
 
-- Project-> Properties->Linker -> General -> Additional Lib Directories. Add the cur lib dir
+- Project-> Properties->Linker -> General -> Additional Lib Directories. Add the cur lib dir, which is currently in the jnc-code/lib folder of d:\\OneDrive-CLS.
 
 - Project->Properties-> Linker-> Input->Additional dependencies. Add libcurl.a and libcurldll.a
 

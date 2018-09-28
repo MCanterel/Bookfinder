@@ -1,16 +1,24 @@
-// folder_manipulation.cpp : Defines the entry point for the console application.
-//
+// process.cpp
+//book data manip funcs
 
 #include "stdafx.h"
 #include <iostream>
 #include <Windows.h>
+#include "process.h"
 using namespace std;
+
+string getBookISBN() {
+	string bookStr;
+	cout << endl << "Enter ISBN number: " << endl;
+	cin >> bookStr;
+	cin.ignore();  //flushes extra characters in buffer so it's clean for next call to getChoice()
+	return bookStr;
+}
 
 void getBookData(string _bookHTMLFile) {
 
 	string line;
 
-	//bool trigger = false;
 	const string searchPhrase1 = "<TD VALIGN=BOTTOM ALIGN=LEFT><B>TITLE: </B> <font FACE=ARIAL COLOR=#006699>";
 	//capture this and the next 2 lines
 
@@ -27,7 +35,6 @@ void getBookData(string _bookHTMLFile) {
 
 	ifstream bookFile;
 	bookFile.open(_bookHTMLFile);
-
 
 	while (std::getline(bookFile, line))
 	{
@@ -59,7 +66,6 @@ void getBookData(string _bookHTMLFile) {
 			string m3b = m3.str();
 			m3b.erase(m3b.begin(), m3b.begin() + 8);
 			bookTitle.assign(m3b);
-			//cout << m3b << endl;
 			captureInfoCountdown = 2;
 		}
 
@@ -81,7 +87,7 @@ void getBookData(string _bookHTMLFile) {
 int stepThroughResultsDir()
 {
 	WIN32_FIND_DATA data;
-	//HANDLE h = FindFirstFile(L"c:\\*.*", &data);
+	//look in 'results' folder, created in query.cpp
 	HANDLE h = FindFirstFile(L".\\results\\*.*", &data);
 
 	if (h != INVALID_HANDLE_VALUE)

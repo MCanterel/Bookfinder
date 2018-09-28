@@ -30,7 +30,7 @@
     <ClInclude Include="query.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="stringfind.h">
+    <ClInclude Include="process.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -44,10 +44,10 @@
     <ClCompile Include="Menu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="stringfind.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="process.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

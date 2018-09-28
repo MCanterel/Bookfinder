@@ -1,14 +1,11 @@
-// ConsoleApplication4.cpp : Defines the entry point for the console application.
-
+// Main application file for bookfinder
 #include "stdafx.h"
 
 vector<string> bookNums;
 
-
 int main()
 {
 	int input;
-
 	Menu m;
 
 	do {
@@ -16,7 +13,7 @@ int main()
 
 		input = m.getChoice();
 		if (input == 1) {  // INPUT ISBN INFO
-			string bookInput = m.getBookISBN();
+			string bookInput = getBookISBN();
 			bookNums.push_back(bookInput);
 			cout << "You just inputted: " << bookInput << endl;
 		}
