@@ -53,6 +53,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="..\xxcurl- Release\libcurl.dll" />
+    <None Include="D:\OneDrive - CLS\jnc code\lib\libcurl.dll" />
   </ItemGroup>
 </Project>

@@ -22,3 +22,6 @@ DO NOT reference the curl directory, but rather its parent
 
 jnc May 21, 2017
 changed May 24, 2017
+
+Moved to u:/vs/Projects-old/~jnc_code folder Sept 26, 2018
+
