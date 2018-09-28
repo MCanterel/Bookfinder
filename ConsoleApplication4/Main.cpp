@@ -26,6 +26,7 @@ int main()
 					cout << "Item # " << i + 1 << ": " << bookNums[i] << endl;
 				}
 			}
+			else { cout << "No items to review." << endl; }
 		}
 
 		if (input == 3) { 	//SEND QUERY AND CLEAR BOOKNUMS

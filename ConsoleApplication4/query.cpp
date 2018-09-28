@@ -33,7 +33,7 @@ string formFileName(string _str) {
 	std::wstring stemp = std::wstring(s.begin(), s.end());
 	LPCWSTR sw = stemp.c_str();
 	if (CreateDirectory(sw, 0) || ERROR_ALREADY_EXISTS == GetLastError()) {
-		cout << "success" << endl;
+		cout << "Success!" << endl;
 		string fileName;
 		fileName = s + _str + ".html";
 		return fileName;
