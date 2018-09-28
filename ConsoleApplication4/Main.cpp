@@ -17,7 +17,7 @@ int main()
 		if (input == 1) {  // INPUT ISBN INFO
 			string bookInput = m.getBookISBN();
 			bookNums.push_back(bookInput);
-			cout << "You inputted: " << bookInput << endl;
+			cout << "You just inputted: " << bookInput << endl;
 		}
 		if (input == 2) {  // REVIEW ISBN INFO
 			if (bookNums.size() > 0) {
